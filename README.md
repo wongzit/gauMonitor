@@ -1,5 +1,7 @@
 # gauMonitor
 Developer by [Zhe Wang](https://www.wangzhe95.net)
+
+
 Version: v1.0.0 stable release
 
 *gauMonitor* is a program package for monitoring the Gaussian calculation jobs. It supports the optimization (opt), 
