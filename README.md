@@ -8,6 +8,7 @@ Version: v1.0.0 stable release
 frequency analysis (freq/opt+freq), relaxed scan (opt=modredundant) and IRC jobs.
 
 ## Usage
+Modify the *gauMonitor* path in the *gauMonitor.sh* script.
 *gauMonitor* is written in Bash shell and Python script. It is designed for HPC so only Linux and macOS are supported.
 Add following command to .bashrc file:
 ```
