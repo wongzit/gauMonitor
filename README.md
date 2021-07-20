@@ -1,5 +1,5 @@
 # gauMonitor
-Developer by [Zhe Wang](https://www.wangzhe95.net)
+Developed by [Zhe Wang](https://www.wangzhe95.net)
 
 
 Version: v1.0.0 stable release
