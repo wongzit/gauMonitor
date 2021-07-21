@@ -4,14 +4,17 @@ echo ""
 echo "                      *      g a u M o n i t o r      *                           "
 echo ""
 echo "                   --- A Gaussian jobs monitor package ---                        "
-echo "                    - Program Version: 1.0.0 // RELEASE -                          "
+echo "                    - Program Version: 2.1.0 // RELEASE -                          "
 echo ""
 echo "             -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-                  "
 echo "                  Developed by Zhe Wang (github.com/wongzit)                      "
 echo "                         [Homepage] www.wangzhe95.net                             "
-echo "                           Last update: 2021-07-17                                "
+echo "                           Last update: 2021-07-23                                "
 echo "             -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-                  "
 echo ""
+
+# Specify the gauMonitor path at following
+GM_DIR='/Users/tetsu/Desktop/gauMonitor_v2.1'
 
 if [ ! $1 ]; then
 	echo ""
@@ -24,7 +27,7 @@ if [ ! $1 ]; then
 	echo "                (2) https://www.wangzhe95.net/program-gaumonitor"
 	echo ""
 else
-	jobtype=$(python3 /home/hpc/wang/gauMonitor/jobType.py $1)
+	jobtype=$(python3 $GM_DIR/jobType.py $1)
 fi
 
 #echo $jobtype
@@ -35,15 +38,21 @@ else
 	if [ $jobtype = "unknown" ]; then
 		echo Unsupported job type.
 	elif [ $jobtype = "opt" ]; then
-		python3 /home/hpc/wang/gauMonitor/gauMonitor.opt.py $1 $jobtype
+		python3 $GM_DIR/gauMonitor.opt.py $1 opt
 	elif [ $jobtype = "optfreq" ]; then
-		python3 /home/hpc/wang/gauMonitor/gauMonitor.opt.py $1 $jobtype
+		python3 $GM_DIR/gauMonitor.opt.py $1 optfreq
 	elif [ $jobtype = "freq" ]; then
-		python3 /home/hpc/wang/gauMonitor/gauMonitor.opt.py $1 $jobtype
+		python3 $GM_DIR/gauMonitor.opt.py $1 freq
+	elif [ $jobtype = "optts" ]; then
+#		python3 $GM_DIR/gauMonitor.opt.py $1 opt
+		python3 $GM_DIR/gauMonitor.ts.py $1 opt
+	elif [ $jobtype = "optfreqts" ]; then
+#		python3 $GM_DIR/gauMonitor.opt.py $1 optfreq
+		python3 $GM_DIR/gauMonitor.ts.py $1 optfreq
 	elif [ $jobtype = "scan" ]; then
-		python3 /home/hpc/wang/gauMonitor/gauMonitor.scan.py $1
+		python3 $GM_DIR/gauMonitor.scan.py $1
 	elif [ $jobtype = "irc" ]; then
-		python3 /home/hpc/wang/gauMonitor/gauMonitor.irc.py $1
+		python3 $GM_DIR/gauMonitor.irc.py $1
 	fi
 fi
 

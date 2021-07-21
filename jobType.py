@@ -1,7 +1,12 @@
+# Job-type module for gauMonitor
+# Program version 2.0.0
+# Last update: 2021-07-22
+
 import sys
 
 logPath = sys.argv[1]
-#logPath = '/Users/wangzhe/Desktop/std_sat_im_opt.log'
+#logPath = '/Users/wangzhe/Desktop/s08_cis_ts_qst3.log'
+#logPath = '/Users/tetsu/Desktop/ts_test.log'
 
 with open(logPath, 'r') as output:
 	logFile = output.readlines()
@@ -13,20 +18,25 @@ for i in range(len(logFile)):
 			routeLine = logFile[i + 1].strip().lower() + logFile[i + 2].strip().lower()
 		break
 
-#print(routeLine)
-
 if 'opt' in routeLine:
 	if 'freq' in routeLine:
 		jobType = 'optfreq'
-	elif 'freq' not in routeLine and 'modredundant' not in routeLine:
-		jobType = 'opt'
 	elif 'modredundant' in routeLine:
 		jobType = 'scan'
-elif 'freq' in routeLine and 'opt' not in routeLine:
+	else:
+		jobType = 'opt'
+elif 'freq' in routeLine:
 	jobType = 'freq'
 elif 'irc' in routeLine:
 	jobType = 'irc'
 else:
 	jobType = 'unknown'
+
+if jobType == 'opt' or jobType == 'optfreq':
+	routeWords = routeLine.split()
+	for routeWord in routeWords:
+		if 'opt' in routeWord:
+			if 'qst' in routeWord or 'ts' in routeWord:
+				jobType += 'ts'
 
 print(jobType)
