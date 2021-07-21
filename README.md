@@ -1,4 +1,5 @@
 # gauMonitor
+![](logo.png)
 Developed by [Zhe Wang](https://www.wangzhe95.net)
 
 
