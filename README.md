@@ -27,10 +27,10 @@ Python 3.2+, Bash shell
 Python 3.9.6, Bash shell on macOS 11.4
 
 ## Update History
-### v2.1.0
+### v2.1.0 (2021-07-22)
 1. Specify the gauMonitor path by inputting once.
 2. Improved informations of transition states.
 
-### v1.0.0
+### v1.0.0 (2021-07-17)
 1. IRC module is available now.
 2. Modified the job type specification script.
