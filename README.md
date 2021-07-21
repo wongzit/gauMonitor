@@ -25,3 +25,12 @@ Python 3.2+, Bash shell
 
 ## Development environment
 Python 3.9.6, Bash shell on macOS 11.4
+
+## Update History
+### v2.1.0
+1. Specify the gauMonitor path by inputting once.
+2. Improved informations of transition states.
+
+### v1.0.0
+1. IRC module is available now.
+2. Modified the job type specification script.
