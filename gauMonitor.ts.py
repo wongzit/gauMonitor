@@ -1,6 +1,6 @@
 # Transition state module of gauMonitor
-# Program version v 0.1.0 // beta
-# Last update at 2021-07-21
+# Program version v 0.2.0 // beta
+# Last update at 2021-07-25
 # Including opt module
 
 import sys

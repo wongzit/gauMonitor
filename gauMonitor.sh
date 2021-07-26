@@ -4,17 +4,17 @@ echo ""
 echo "                      *      g a u M o n i t o r      *                           "
 echo ""
 echo "                   --- A Gaussian jobs monitor package ---                        "
-echo "                    - Program Version: 2.1.0 // RELEASE -                          "
+echo "                    - Program Version: 2.3.0 // RELEASE -                          "
 echo ""
 echo "             -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-                  "
 echo "                  Developed by Zhe Wang (github.com/wongzit)                      "
 echo "                         [Homepage] www.wangzhe95.net                             "
-echo "                           Last update: 2021-07-23                                "
+echo "                           Last update: 2021-07-25                                "
 echo "             -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-                  "
 echo ""
 
 # Specify the gauMonitor path at following
-GM_DIR='/Users/tetsu/Desktop/gauMonitor_v2.1'
+GM_DIR='/home/hpc/wang/gauMonitor'
 
 if [ ! $1 ]; then
 	echo ""
