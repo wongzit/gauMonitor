@@ -16,6 +16,10 @@ and running *gauMonitor* with:
 ```
 gaumonitor [Gaussian_out.log]
 ```
+Check the user document:
+```
+gaumonitor -h
+```
 
 ## Dependence
 Python 3.2+, Bash shell
