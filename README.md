@@ -24,6 +24,14 @@ Python 3.2+, Bash shell
 Python 3.9.6, Bash shell on macOS 11.4
 
 ## Update History
+### v3.0.0 (2021-09-12)
+1. Updated userinterface for SCF iteration section and energy section.
+2. Now the directions (forward and reverse) will be displayed for IRC jobs.
+3. Electronic energies of stationary points for SCAN calculations would be summarized in a new table.
+4. Document has been added, use command `guamonitor -h` to check the user document.
+5. Add supporting for calculations using `counterpoise` or `counter` keywords.
+6. Improved stability.
+
 ### v2.3.0 (2021-07-25)
 1. Bug fixed.
 
