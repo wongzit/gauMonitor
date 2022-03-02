@@ -1,6 +1,6 @@
 # gauMonitor
 ![](logo.png)
-Developed by [Zhe Wang](https://www.wangzhe95.net)
+Developed by [Zhe Wang](https://wongzit.github.io)
 
 *gauMonitor* is a program package for monitoring the Gaussian calculation jobs. It supports the optimization (opt), 
 frequency analysis (freq/opt+freq), relaxed scan (opt=modredundant) and IRC jobs.
